@@ -39,7 +39,7 @@
             <div class="row" id="formDiv">
                 <div class="col-4"></div>
                 <div class="col-4 border border-light" id="formContainer">
-                    <form>
+                    <form id="loginForm">
                         <h3 class="font-weight-light pt-3">
                             Please Login
                         </h3>
@@ -53,11 +53,9 @@
                             <input type="password" class="form-control" id="password" placeholder="Password">
                         </div>
                         <div class="form-group" id="loginStatus">
-                            <hr>
-                            <p>Login Failed: Username or Password Incorrect!</p>
                         </div>
                         <div class="text-center">
-                            <button type="submit" id ="loginbtn" class="btn btn-dark">Login</button>
+                            <button type="button" id="loginbtn" class="btn btn-dark">Login</button>
                             <button type="reset" class="btn btn-dark">Cancel</button>
                         </div>
                     </form>
@@ -78,6 +76,8 @@
             crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
             crossorigin="anonymous"></script>
+            <script src="scripts/operations.js"></script>
+            <script src="scripts/constants.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/restclient.js"></script>
     </body>
