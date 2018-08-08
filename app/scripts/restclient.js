@@ -76,6 +76,25 @@ function loadContactsList() {
   );
 }
 
+function getContact(conID, callback) {
+  var contact;
+  $.get(
+    constants.apiUrl.accounts +
+      window.localStorage.accountId +
+      "/contacts/find/" +
+      conID,
+    function(response) {
+      if (response.length == 0) {
+        console.log("No Contact");
+      } else {
+        contact = response;
+        console.log(contact);
+        callback(contact);
+      }
+    }
+  );
+}
+
 function loadContactsPage() {
   window.open("Contacts.html", "_self");
 }
@@ -97,20 +116,20 @@ function generateHTMLforTable(data) {
     var contactAddress = contact.contactAddresses[0];
     var address =
       contactAddress.streetAddress +
-      "," +
+      " - " +
       contactAddress.city +
-      "," +
+      " - " +
       contactAddress.state +
-      "," +
+      " - " +
       contactAddress.country;
     tableHTML += "<td>" + address + "</td>";
     tableHTML +=
       "<td>" +
-      '<a href="#" id="edit" data-id=' +
+      '<a href="#" id="edit" class="btn btn-dark btn-outline-light btn-sm" data-id=' +
       contact.id +
-      ' onClick="loadupdatePage()">Edit</a>' +
+      ' onClick="loadupdateModal(getRowID())">Edit</a>' +
       "  ||  " +
-      '<a href="#" id="delete" data-id=' +
+      '<a href="#" id="delete" class="btn btn-dark btn-outline-light btn-sm" data-id=' +
       contact.id +
       ' onClick="deleteContact()">Delete</a>' +
       "</td>";
@@ -119,4 +138,33 @@ function generateHTMLforTable(data) {
   }
   window.localStorage.addresses = addresses;
   return tableHTML;
+}
+
+function getRowID() {
+  var id = $(event.target).data("id");
+  return id;
+}
+
+function loadupdateModal(conID) {
+  // window.localStorage.contactID=getRowID();
+  $("#updateContactModal").modal("toggle");
+  var id = conID;
+  getContact(conID,function(rezult){
+    var contactAddr = rezult.contactAddresses[0];
+    $("#contactID").val(conID);
+    $("#inFirstName").val(rezult.firstName);
+    $("#inLastName").val(rezult.lastName);
+    $("#inEmail").val(rezult.emailAddress);
+    $("#inGender").val(rezult.gender);
+    $("#inPhoneNum").val(rezult.phoneNumber);
+    $("#inStatus").val(rezult.status);
+    $("#inStreetAddress").val(contactAddr.streetAddress);
+    $("#inCity").val(contactAddr.city);
+    $("#inState").val(contactAddr.state);
+    $("#inCountry").val(contactAddr.country);
+  });
+  
+
+  //To get contact id for further usage
+  //window.localStorage.getItem('contactID');
 }

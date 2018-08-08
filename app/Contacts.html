@@ -74,7 +74,7 @@
                 <div class="col-1"></div>
             </div>
 
-            <!-- Modal -->
+            <!-- Add New Contact Modal -->
             <div class="modal fade" id="addContactModal" tabindex="-1" role="dialog" aria-labelledby="addContactModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
@@ -115,14 +115,14 @@
                                     <div class="form-group col-md-4">
 
                                         <select id="inputStatus" class="form-control">
-                                            <option value="Active">Active</option>
-                                            <option value="InActive">Inactive</option>
+                                            <option value="Active">Status: Active</option>
+                                            <option value="InActive">Status: Inactive</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <input type="text" class="form-control" id="inputStreetAddress" placeholder="Street Address">
+                                    <div class="form-group col-md-12">
+                                        <input type="text" class="form-control" id="inputStreetAddress" placeholder="Street Address (eg: House # 123, Street X, Sector Y)">
                                     </div>
                                 </div>
                                 <div class="form-row">
@@ -148,6 +148,86 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Update Contact Modal -->
+            <div class="modal fade" id="updateContactModal" tabindex="-1" role="dialog" aria-labelledby="updateContactModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="updateContactModalLabel">Modify Contact Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="contactID">Contact ID</label>
+                                        <input type="text" class="form-control" id="contactID" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <input type="text" class="form-control" id="inFirstName" placeholder="First Name">
+                                    </div>
+                                    <div class="form-group col-md-4">
+
+                                        <input type="text" class="form-control" id="inLastName" placeholder="Last Name">
+                                    </div>
+                                    <div class="form-group col-md-4">
+
+                                        <input type="email" class="form-control" id="inEmail" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+
+                                        <select id="inGender" class="form-control">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+
+                                        <input type="text" class="form-control" id="inPhoneNum" placeholder="eg: +923001234567">
+                                    </div>
+                                    <div class="form-group col-md-4">
+
+                                        <select id="inStatus" class="form-control">
+                                            <option value="Active">Active</option>
+                                            <option value="InActive">Inactive</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <input type="text" class="form-control" id="inStreetAddress" placeholder="Street Address">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+
+                                        <input type="text" class="form-control" id="inCity" placeholder="City">
+                                    </div>
+                                    <div class="form-group col-md-4">
+
+                                        <input type="text" class="form-control" id="inState" placeholder="State">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <input type="text" class="form-control" id="inCountry" placeholder="Country">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
 
