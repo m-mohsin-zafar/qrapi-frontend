@@ -1,0 +1,50 @@
+body {
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+
+.color1 {
+  background-color: beige;
+}
+
+.color2 {
+  background-color: gainsboro;
+}
+
+.shadowall {
+  -moz-box-shadow: 0 0 10px #999;
+  -webkit-box-shadow: 0 0 10px #999;
+  box-shadow: 0 0 10px #999;
+}
+
+#mainDiv {
+  background-color: beige;
+  height: 100%;
+}
+
+#mainContainer {
+  background-color: gainsboro;
+  margin: 0 auto;
+  height: 100%;
+  -moz-box-shadow: 0 0 10px #999;
+  -webkit-box-shadow: 0 0 10px #999;
+  box-shadow: 0 0 10px #999;
+}
+
+#viewContactMap {
+  text-decoration: underline;
+}
+
+#formContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -moz-box-shadow: 0 0 10px #999;
+  -webkit-box-shadow: 0 0 10px #999;
+  box-shadow: 0 0 10px #999;
+}
+
+#loginStatus {
+  display: none;
+}

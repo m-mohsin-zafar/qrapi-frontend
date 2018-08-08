@@ -1,0 +1,82 @@
+<<!doctype html>
+    <html class="no-js" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Contacts List</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+            crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="styles/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="styles/custom.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+            crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand">
+                <span class="text-primary">Quick Rescue</span>
+            </a>
+            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="my-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-md-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#formContainer">Account Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="w-100" id="mainDiv">
+            <div class="row w-75 mt-1 pt-3" id="mainContainer">
+                <div class="col-4">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-dark  my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="col-3"></div>
+                <div class="col-3 ml-md-auto">
+                    <a class="text-dark font-weight-bold " id="viewContactMap" href="#">View Contact Homes on Map</a>
+                </div>
+                <div class="col-auto ">
+                    <i class="fas fa-plus-circle"></i>
+                    <a class="text-dark font-weight-bold " id="" href="#"> New Contact</a>
+                </div>
+                <div class="row m-3 w-100">
+                    <div class="col-1">HI bOY</div>
+                    <div class="col-10 border border-light" id="contactsTable">
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="bg-dark fixed-bottom">
+            <p class="text-center text-light font-weight-light p-2">Copyright © 2018 Quick Rescue </p>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+            crossorigin="anonymous"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/restclient.js"></script>
+    </body>
+
+    </html>
